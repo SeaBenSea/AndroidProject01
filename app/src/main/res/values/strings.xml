@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Project01</string>
+
+    <string name="StudentID">Enter Student ID</string>
+    <string name="StudentName">Enter Student Name</string>
+    <string name="StudentLastName">Enter Student Last Name</string>
+    <string name="StudentGPA">Enter Student GPA</string>
+    <string name="studentAdditionalInfo">Enter Student Additional Information</string>
+
+    <string name="rdMale">Male</string>
+    <string name="rdFemale">Female</string>
+    <string name="rdFull">Full</string>
+    <string name="rdHalf">Half</string>
+    <string name="rdNone">None</string>
+    
+    <string name="checkAdditionalInfo">Additional Information</string>
+
+    <string name="buttonSubmit">Submit</string>
+    <string name="buttonReset">Reset</string>
+    <string name="buttonExit">Exit</string>
+
+    <string name="textResult">Result:</string>
+    <string name="textCityName"></string>
+</resources>

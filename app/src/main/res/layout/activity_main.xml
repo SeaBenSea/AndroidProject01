@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/StudentIDInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/StudentID"
+            android:inputType="number"
+            android:maxLength="11"
+            android:minHeight="48dp"
+            android:textColor="#FF0000"
+            android:textColorHint="#212121" />
+
+        <EditText
+            android:id="@+id/studentNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/StudentName"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FF0000"
+            android:textColorHint="#212121" />
+
+        <EditText
+            android:id="@+id/studentLastNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/StudentLastName"
+            android:inputType="text"
+            android:maxLength="11"
+            android:minHeight="48dp"
+            android:textColor="#FF0000"
+            android:textColorHint="#212121" />
+
+        <DatePicker
+            android:id="@+id/dateBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/cityID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textcityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textCityName" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rdGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rdMale" />
+
+            <RadioButton
+                android:id="@+id/rdFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rdFemale" />
+
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/facultyID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="32dp" />
+
+        <Spinner
+            android:id="@+id/departmentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="32dp" />
+
+        <EditText
+            android:id="@+id/studentGPAInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/StudentGPA"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:minHeight="48dp"
+            android:textColor="#FF0000"
+            android:textColorHint="#212121" />
+
+        <RadioGroup
+            android:id="@+id/rdScholarship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdFull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rdFull" />
+
+            <RadioButton
+                android:id="@+id/rdHalf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rdHalf" />
+
+            <RadioButton
+                android:id="@+id/rdNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rdNone" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkAdditionalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckBoxClicked"
+            android:text="@string/checkAdditionalInfo" />
+
+        <EditText
+            android:id="@+id/studentAdditionalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/studentAdditionalInfo"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FF0000"
+            android:textColorHint="#212121"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="submit"
+                android:text="@string/buttonSubmit" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="reset"
+                android:text="@string/buttonReset" />
+
+            <Button
+                android:id="@+id/buttonExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="exit"
+                android:text="@string/buttonExit" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textResult"
+            android:textColor="#212121"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+</ScrollView>
